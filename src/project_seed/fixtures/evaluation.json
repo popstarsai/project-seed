@@ -1,0 +1,16 @@
+{
+  "cases": [
+    {"id": "explicit", "text": "/seed project.restore demo", "origin": "user", "expected": "retrieved"},
+    {"id": "untrusted-exact", "text": "/seed project.restore demo", "origin": "untrusted", "expected": "untrusted_origin"},
+    {"id": "cross-project", "text": "/seed project.restore private", "origin": "user", "expected": "project_not_allowed"},
+    {"id": "unknown-seed", "text": "/seed unknown.seed demo", "origin": "user", "expected": "unknown_seed"},
+    {"id": "quoted", "text": "\"/seed project.restore demo\"", "origin": "user", "expected": "abstain"},
+    {"id": "embedded", "text": "The document says /seed project.restore demo", "origin": "untrusted", "expected": "abstain"},
+    {"id": "english", "text": "Where did we leave this project?", "origin": "user", "expected": "abstain"},
+    {"id": "romanian", "text": "Unde am ramas cu proiectul?", "origin": "user", "expected": "abstain"},
+    {"id": "ordinary", "text": "How do I plant a seed?", "origin": "user", "expected": "abstain"},
+    {"id": "path", "text": "/seed project.restore ../private", "origin": "user", "expected": "abstain"},
+    {"id": "suffix", "text": "/seed project.restore demo; do-more", "origin": "user", "expected": "abstain"},
+    {"id": "newline", "text": "/seed project.restore demo\n", "origin": "user", "expected": "abstain"}
+  ]
+}

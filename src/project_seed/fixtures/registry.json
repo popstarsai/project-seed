@@ -1,0 +1,13 @@
+{
+  "schema_version": "0.1",
+  "seeds": [
+    {
+      "id": "project.restore",
+      "version": "0.1.0",
+      "description": "Restore the summary, decisions, and next steps of one allowed project.",
+      "capability": "memory.read_project",
+      "required_scope": "memory:read",
+      "enabled": true
+    }
+  ]
+}

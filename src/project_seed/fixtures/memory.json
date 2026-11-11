@@ -1,0 +1,16 @@
+{
+  "schema_version": "0.1",
+  "projects": [
+    {
+      "project_id": "demo",
+      "title": "Synthetic project notebook",
+      "summary": "An example team is building a read-only project context assistant.",
+      "decisions": ["Keep memory outside model weights.", "Require explicit project grants."],
+      "next_steps": ["Review the runtime tests.", "Add one multilingual recognition test."],
+      "provenance": {
+        "source": "Synthetic fixture authored for Project Seed; not real user history.",
+        "updated_at": "2026-11-11T00:00:00Z"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "project-seed-demo": {
+      "command": "/ABSOLUTE/PATH/TO/project-seed/.venv/bin/python",
+      "args": [
+        "-m", "project_seed.mcp_server",
+        "--registry", "/ABSOLUTE/PATH/TO/project-seed/src/project_seed/fixtures/registry.json",
+        "--memory", "/ABSOLUTE/PATH/TO/project-seed/src/project_seed/fixtures/memory.json",
+        "--principal", "local-demo",
+        "--allow-project", "demo",
+        "--allow-memory-read",
+        "--consent"
+      ]
+    }
+  }
+}

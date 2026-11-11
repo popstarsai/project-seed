@@ -1,0 +1,30 @@
+name: Research or feature proposal
+description: Suggest an experiment, adapter, capability, or documentation improvement.
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or research question
+      description: What should improve, for whom, and compared with which baseline?
+    validations:
+      required: true
+  - type: textarea
+    id: approach
+    attributes:
+      label: Proposed approach and alternatives
+    validations:
+      required: true
+  - type: textarea
+    id: boundaries
+    attributes:
+      label: Trust boundaries and data provenance
+      description: Permissions, data/model licenses, privacy, and possible misuse or accidental activation.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Acceptance tests or evaluation plan
+      description: Distinguish implemented work, measured evidence, and hypotheses.
+    validations:
+      required: true
