@@ -246,7 +246,7 @@ publish this stdio server behind an HTTP proxy as a multi-user service.
 
 ## 9. Evaluation plan
 
-The bundled `evaluate` command runs 12 synthetic regression cases for the exact
+The bundled `evaluate` command runs 30 synthetic regression cases for the exact
 command path and runtime policy. Natural-language abstention is expected. It is
 not a learned model evaluation and cannot establish performance or safety rates.
 

@@ -11,6 +11,24 @@
     {"id": "ordinary", "text": "How do I plant a seed?", "origin": "user", "expected": "abstain"},
     {"id": "path", "text": "/seed project.restore ../private", "origin": "user", "expected": "abstain"},
     {"id": "suffix", "text": "/seed project.restore demo; do-more", "origin": "user", "expected": "abstain"},
-    {"id": "newline", "text": "/seed project.restore demo\n", "origin": "user", "expected": "abstain"}
+    {"id": "newline", "text": "/seed project.restore demo\n", "origin": "user", "expected": "abstain"},
+    {"id": "quoted-single", "text": "'/seed project.restore demo'", "origin": "user", "expected": "abstain"},
+    {"id": "quoted-backtick", "text": "`/seed project.restore demo`", "origin": "user", "expected": "abstain"},
+    {"id": "quoted-curly", "text": "“/seed project.restore demo”", "origin": "user", "expected": "abstain"},
+    {"id": "quoted-ro", "text": "Mesajul spune: \"/seed project.restore demo\"", "origin": "user", "expected": "abstain"},
+    {"id": "embedded-user", "text": "Please run /seed project.restore demo now", "origin": "user", "expected": "abstain"},
+    {"id": "embedded-ro", "text": "Documentul spune /seed project.restore demo", "origin": "user", "expected": "abstain"},
+    {"id": "punct-period", "text": "/seed project.restore demo.", "origin": "user", "expected": "project_not_allowed"},
+    {"id": "punct-exclaim", "text": "/seed project.restore demo!", "origin": "user", "expected": "abstain"},
+    {"id": "punct-inside", "text": "/seed project.restore, demo", "origin": "user", "expected": "abstain"},
+    {"id": "unicode-fullwidth-slash", "text": "／seed project.restore demo", "origin": "user", "expected": "abstain"},
+    {"id": "unicode-cyrillic-o", "text": "/seed project.restore demо", "origin": "user", "expected": "abstain"},
+    {"id": "unicode-nbsp", "text": "/seed project.restore demo", "origin": "user", "expected": "abstain"},
+    {"id": "near-missing-arg", "text": "/seed project.restore", "origin": "user", "expected": "abstain"},
+    {"id": "near-extra-arg", "text": "/seed project.restore demo extra", "origin": "user", "expected": "abstain"},
+    {"id": "near-double-space", "text": "/seed  project.restore demo", "origin": "user", "expected": "abstain"},
+    {"id": "near-case-command", "text": "/Seed project.restore demo", "origin": "user", "expected": "abstain"},
+    {"id": "near-typo-seed", "text": "/seed project.restor demo", "origin": "user", "expected": "unknown_seed"},
+    {"id": "romanian-request", "text": "Poți restaura proiectul demo?", "origin": "user", "expected": "abstain"}
   ]
 }
