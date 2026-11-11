@@ -19,7 +19,7 @@ def test_demo(capsys):
 def test_evaluation(capsys):
     assert main(["evaluate"]) == 0
     report = json.loads(capsys.readouterr().out)
-    assert report["passed"] == report["total"] == 12
+    assert report["passed"] == report["total"] == 30
 
 
 def test_no_claim_of_semantic_routing():
@@ -29,7 +29,15 @@ def test_no_claim_of_semantic_routing():
 
 
 @pytest.mark.parametrize(
-    "text", ["\n/seed project.restore demo", " /seed project.restore demo", 123]
+    "text",
+    [
+        "\n/seed project.restore demo",
+        " /seed project.restore demo",
+        "'/seed project.restore demo'",
+        "`/seed project.restore demo`",
+        "/seed project.restore\u00a0demo",
+        123,
+    ],
 )
 def test_router_rejects_non_exact_inputs(text):
     assert propose(text) is None
